@@ -231,7 +231,7 @@ int nsga2(int nvar, int ncon, int nobj, double f[], double x[], double g[],
     allocate_memory_pop (parent_pop, popsize, global);
     allocate_memory_pop (child_pop, popsize, global);
     allocate_memory_pop (mixed_pop, 2*popsize, global);
-    randomize();
+    randomize(seed);
     initialize_pop (parent_pop, global);
     
 	// 

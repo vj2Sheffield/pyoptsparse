@@ -52,7 +52,7 @@ class NSGA2(Optimizer):
             "pCross_bin": [float, 0.0],
             "pMut_bin": [float, 0.0],
             "PrintOut": [int, 1],
-            "seed": [float, 0],
+            "seed": [float, 0.0],
             "xinit": [int, 0],
         }
         return defOpts

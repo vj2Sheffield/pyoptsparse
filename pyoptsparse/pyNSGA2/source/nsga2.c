@@ -88,7 +88,7 @@ int nsga2(int nvar, int ncon, int nobj, double f[], double x[], double g[],
     population *mixed_pop;
     
     // "random" numbers seed
-    if (seed==0) 
+    if (seed==0.0) 
     {  
         // use of clock to generate "random" seed
         time_t seconds;

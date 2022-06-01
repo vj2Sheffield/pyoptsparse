@@ -52,7 +52,7 @@ class NSGA2(Optimizer):
             "pCross_bin": [float, 0.0],
             "pMut_bin": [float, 0.0],
             "PrintOut": [int, 1],
-            "seed": [int, 0],
+            "seed": [float, 0],
             "xinit": [int, 0],
         }
         return defOpts
@@ -164,7 +164,7 @@ class NSGA2(Optimizer):
                 raise Error("Incorrect option PrintOut")
 
             seed = self.getOption("seed")
-            if seed == 0:
+            if seed == 0.0:
                 seed = time.time()
 
             # Run NSGA-II
@@ -173,7 +173,7 @@ class NSGA2(Optimizer):
             # fmt: off
             nsga2.nsga2(n, m, len_ff, f, x, g, nfeval, xl, xu, opt('PopSize'), opt('maxGen'),
                         opt('pCross_real'), opt('pMut_real'), opt('eta_c'), opt('eta_m'),
-                        opt('pCross_bin'), opt('pMut_bin'), printout, seed, opt('xinit'))
+                        opt('pCross_bin'), opt('pMut_bin'), printout, opt('seed'), opt('xinit'))
             # fmt: on
             optTime = time.time() - t0
 

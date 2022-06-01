@@ -166,6 +166,7 @@ class NSGA2(Optimizer):
             seed = self.getOption("seed")
             if seed == 0.0:
                 seed = time.time()
+                print("check: pass")
 
             # Run NSGA-II
             nsga2.set_pyfunc(objconfunc)
